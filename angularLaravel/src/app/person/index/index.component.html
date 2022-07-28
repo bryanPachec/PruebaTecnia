@@ -1,0 +1,34 @@
+<section>
+
+    <div class="d-flex justify-content-between">
+      <h4>Lista de clientes</h4>
+      <a routerLink="/person/create" class="btn btn-success">Crear un cliente</a>
+    </div>
+
+    <br>
+    
+    <table class="table ">
+      <tr>
+        <th>ID</th>
+        <th>Usuario</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>tipo identificacion</th>
+        <th>Número identificacion</th>
+        <th>Fecha Nacimiento</th>
+        <th width="220px">Action</th>
+      </tr>
+      <tr *ngFor="let person of persons">
+        <td>{{ person.id }}</td>
+        <td>{{ person.nombres }}</td>
+        <td>{{ person.apellidos }}</td>
+        <td>{{ person.tipo_identificacion }}</td>
+        <td>{{ person.numero_identificacion }}</td>
+        <td>{{ person.fecha_nacimiento }}</td>
+        <td>
+          <a href="#" [routerLink]="['/person/', 'edit', person.id  ]" class="btn btn-primary">Editar</a>
+          <button type="button" (click)="deletePerson(person.id)" class="btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
+    </table>
+ </section>

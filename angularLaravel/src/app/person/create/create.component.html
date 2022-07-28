@@ -1,0 +1,94 @@
+<div>
+
+    <div class="d-flex justify-content-between">
+      <h4>Registro de clientes</h4>
+      <a href="#" routerLink="/person/index" class="btn btn-primaryt">Atras</a>
+    </div>
+  
+    <hr/>
+  
+      <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="title">Usuario:</label>
+            <input
+              formControlName="usuario"
+              id="usuario"
+              type="text"
+              class="form-control">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="title">Nombres:</label>
+              <input
+                formControlName="nombres"
+                id="nombres"
+                type="text"
+                class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="title">Apellidos:</label>
+              <input
+                formControlName="apellidos"
+                id="apellidos"
+                type="text"
+                class="form-control">
+          </div>
+        </div>
+        <br>
+        <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="title">tipo de identificacion:</label>
+              <input
+                formControlName="tipo_identificacion"
+                id="tipo_identificacion"
+                type="text"
+                class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="title">Numero de identificacion:</label>
+            <input
+              formControlName="numero_identificacion"
+              id="numero_identificacion"
+              type="number"
+              class="form-control">
+          </div>
+        </div>
+        <br>
+        <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="title">fecha de nacimiento:</label>
+            <input
+              formControlName="fecha_nacimiento"
+              id="fecha_nacimiento"
+              type="date"
+              class="form-control">
+          </div>
+        </div>
+        <br>
+
+        <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="title">Contraseña:</label>
+              <input
+                formControlName="contraseña"
+                id="contraseña"
+                type="text"
+                class="form-control">
+          </div>
+        </div>
+          <br>
+  
+          <button class="btn btn-primary" type="submit">Crear</button>
+      </form>
+  </div>
+  
